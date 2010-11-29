@@ -1,0 +1,12 @@
+common: &common
+
+development:
+  domain: localhost:3000
+  <<: *common
+
+test:
+  <<: *common
+
+production:
+  domain: authlogic-rails3-example-heroku.com
+  <<: *common 

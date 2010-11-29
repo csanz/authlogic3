@@ -1,0 +1,21 @@
+
+%h1 change my password
+
+= form_for @user, :url => password_reset_path, :method => :put do |f|
+  -if @user.errors.any?
+    #errorExplanation
+      %h2= "#{pluralize(@user.errors.count, "error")} prohibited passwords being saved:"
+      %ul
+        - @user.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :password
+    = f.text_field :password, :value => (params[:user]) ? params[:user][:password] : ""
+  .field
+    = f.label :password_confirmation
+    = f.text_field :password_confirmation, :value => (params[:user]) ? params[:user][:password_confirmation] : ""
+  .actions
+    = f.submit 'Update my password and log me in'
+
+

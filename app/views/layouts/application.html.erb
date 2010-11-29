@@ -7,14 +7,24 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
+	<% if(flash[:notice]!=nil)then%>
+		<div id="notice"><%= flash[:notice] %></div>
+	<% end %>
+	<% if(flash[:warning]!=nil)then%>
+		<div id="warning"><%= flash[:warning] %></div>
+	<% end %>
 <p>
+	
   <% if current_user %>
-    Hello <%= current_user.name %> (<%= link_to 'Not you?', logout_path, :method => :delete %>)
+    Hello <%= current_user.name %> (<%= link_to 'logout', logout_path, :method => :delete %>)
   <% end %>
 </p>
 
 <%= yield %>
+
+<br/><br/>
+<hr>
+<%= APP_CONFIG[:domain] %>
 
 </body>
 </html>

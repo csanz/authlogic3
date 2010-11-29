@@ -23,6 +23,9 @@ div.field, div.actions {
 #notice {
   color: green;
 }
+#warning {
+  color: red;
+}
 
 .field_with_errors {
   padding: 2px;

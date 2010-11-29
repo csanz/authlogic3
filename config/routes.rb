@@ -1,9 +1,13 @@
 AuthlogicRails3Example::Application.routes.draw do |map|
   resources :users
+  resources :password_resets
+  resources :user_verifications
   
   get    'login(.:format)'  => 'user_session#new',     :as => :login
   post   'login(.:format)'  => 'user_session#create',  :as => :login
   delete 'logout(.:format)' => 'user_session#destroy', :as => :logout
+
+  get    'verify/:id'       => 'user_verifications#index'
 
   root :to => 'user_session#new' # login page
 

@@ -20,6 +20,7 @@ gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => '
 
 # Add support for sqlite3 for dev and test DBs
 gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'ruby-debug'
 
 group :development do
   # Add additional generators for Rails in the development environment

@@ -1,0 +1,19 @@
+%h1 forgot password
+
+fill out the form below and instructions to reset your password will be emailed to you:<br />
+
+= form_for @user, :url => password_resets_path do |f|
+  -if @user.errors.any?
+    #errorExplanation
+      %h2= "#{pluralize(@user.errors.count, "error")} prohibited passwords being sent:"
+      %ul
+        - @user.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :email
+    = f.text_field :email, :name => "email", :value => params[:email]
+  .actions
+    = f.submit 'Reset my password'
+
+

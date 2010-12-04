@@ -2,8 +2,6 @@ This is a 'enhanced' example application demonstrating Authlogic running on Rail
 
 == Added Features
 
-* Registration
-* Login
 * Forgot password
 * Email activation
 

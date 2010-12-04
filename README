@@ -7,6 +7,11 @@ This is a 'enhanced' example application demonstrating Authlogic running on Rail
 * Forgot password
 * Email activation
 
+== Upcoming Features
+
+* Captcha support (login + registration)
+* SMS registration support
+
 == Original Readme
 
 It uses the email to login, you could also use a login field, if you like. I use a custom email validator (blatantly stolen from Ryan Bates) to validate email formats.

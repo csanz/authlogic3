@@ -8,5 +8,5 @@ test:
   <<: *common
 
 production:
-  domain: authlogic-rails3-example-heroku.com
+  domain: authlogic-rails3-example.heroku.com
   <<: *common 
